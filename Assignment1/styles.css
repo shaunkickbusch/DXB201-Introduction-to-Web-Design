@@ -1,0 +1,638 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*GLOBAL*/
+/*=====================================================*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	color: #FFF;
+	background-color: #FFF;
+	margin: 0;
+	height: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*NAVIGATION*/
+/*=====================================================*/
+.nav-container {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 100%;
+}
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.logo {
+	float: left;
+	width: 120px;
+	height: 40px;
+}
+header {
+	padding: 0.3vw;
+}
+nav {
+	float: right;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+nav li {
+	font-weight: 500;
+	font-family: 'Questrial', sans-serif;
+	display: inline-block;
+	margin-left: 12vw;
+	padding-top: 2vh;
+	position: relative;
+}
+nav a {
+	color: #D7CeC7;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+nav a:hover {
+	color: #c09f80;
+}
+nav a::before {
+	content: '';
+	display: block;
+	height: 0.3em;
+	background-color: #c09f80;
+	position: absolute;
+	top: 0;
+	width: 0%;
+	transition: all ease-in-out 250ms;
+}
+nav a:hover::before {
+	width: 100%;
+}
+/*BUTTON*/
+/*=====================================================*/
+.button {
+	font-size: 3vw;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 0.07em;
+	border-style: solid;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	padding-left: 1%;
+	padding-right: 1%;
+	display: inline-block;
+}
+.button-accent {
+	color: #FFF;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.button-banner {
+	margin-right: 30%;
+	margin-left: 40%;
+	margin-top: 30%;
+	position: absolute;
+	position: absolute;
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 0.2vw;
+}
+.button-accent:hover, .button-accent:focus {
+	background: #76323f;
+}
+.home-button-origins {
+	font-size: 3vw;
+}
+.home-button-recipe {
+	font-size: 3vw;
+}
+.recipe-button-banner {
+	margin-right: 30%;
+	margin-left: 40%;
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 2.5vw;
+	position: absolute;
+	margin-top: 30%;
+}
+.button-about {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0.9vw;
+	padding-right: 0.9vw;
+	margin-top: 1vw;
+	font-size:1.5vw;
+}
+/*BANNER*/
+/*=====================================================*/
+
+.home-banner-container {
+	background-image: url(images/cropped.png);
+	width: 100%;
+	height: 47vw;
+	background-size: cover;
+	background-position: center;
+}
+.home-banner-text {
+	font-family: 'Fjalla One', sans-serif;
+	float: right;
+	margin-top: 10%;
+	margin-right: 5%;
+	text-align: left;
+	font-size: 6vw;
+	color: #76323f;
+	text-shadow: 2px 2px 2px #000;
+	display: block;
+}
+.home-banner-text span {
+	font-family: 'Pacifico', cursive;
+	display: block;
+}
+.home-delicious {
+	background-image: url(images/true-blue-anzac-biscuits.jpg);
+	background-size: cover;
+	padding-bottom: 10vw;
+}
+.home-delicious-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	padding: 1%;
+	margin-left: 2%;
+	width: 60%;
+	outline: 0.4em solid #76323f;
+	outline-offset: -4vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	position: relative;
+	top: -6vw;
+}
+.home-delicious-textbox h3 {
+	color: #76323f;
+	position: absolute;
+	left: 15vw;
+	transform: translateX(-50%);
+	background-image: url(images/seamless_paper_texture.png);
+	font-family: 'Pacifico', cursive;
+	font-size: 3vw;
+	letter-spacing: 5px;
+	top: -1.5vw;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.home-delicious-textbox p {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 2vw;
+	color: #c09f80;
+	padding-top: 7%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.home-delicious-textbox span {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+	font-size: 80%;
+	padding-top: 5%;
+}
+/*QUOTE*/
+/*=====================================================*/
+
+.quote-image-container {
+	text-align: center;
+	margin-left: 5%;
+	background-image: url(images/seamless_paper_texture.png);
+	width: 30%;
+	padding: 0.5%;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10em 0 rgba(0, 0, 0, 1);
+	top: -3%;
+	margin-bottom: 0em;
+}
+.quote-image-overlay {
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	left: 0em;
+	right: 0em;
+	padding-bottom: 2vh;
+	bottom: 0.09vh;
+	transform: translateY(150%);
+}
+.quote-image-overlay p {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.5vw;
+}
+.quote-image-container:hover .quote-image-overlay {
+	transition: all ease-in-out 250ms;
+	transform: translateY(0%);
+}
+.recipe-image {
+	margin-top: 5%;
+	margin-left: 25%;
+}
+.quote-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	margin-right: 5%;
+	width: 30%;
+	height: 68vw;
+	outline: 5px solid #76323f;
+	outline-offset: -3vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	float: right;
+	position: relative;
+	overflow: hidden;
+	top: -6vw;
+}
+.quote-textbox p {
+	z-index: 100;
+	font-family: 'Raleway Light', sans-serif;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 20%;
+	margin: 0 0;
+	line-height: 140%;
+	font-size: 1vw;
+	color: #c09f80;
+	position: relative;
+}
+.quote-author {
+	font-family: 'Pacifico', cursive;
+	font-size: 1.3vw;
+	color: #76323f;
+	position: absolute;
+	margin-left: 13vw;
+}
+.quote-symbol {
+	position: absolute;
+	color: #76323f;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 10vw;
+	background-image: url(images/seamless_paper_texture.png);
+	overflow: hidden;
+	padding-left: 1vw;
+	;
+	padding-right: 1%;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0 0 0 0;
+}
+.opening-quote {
+	float: left;
+	left: 15%;
+}
+.closing-quote {
+	float: right;
+	left: 65%;
+	margin-top: 4.5vw;
+}
+/*FOOTER*/
+/*=====================================================*/
+
+.footer-container {
+	width: 100%;
+	margin: 0 0 4vw 0;
+	padding: 0 0 0 0;
+	float: left;
+}
+.footer-column {
+	width: 33.3333333333%;
+	height: 6vw;
+	float: left;
+}
+.footer-logo img {
+	width: 60%;
+	display: block;
+	margin: 4% auto auto auto;
+}
+footer ul {
+	list-style: none;
+}
+footer li {
+	font-family: 'Questrial', sans-serif;
+	position: relative;
+	line-height: 190%;
+	font-size: 1vw;
+}
+footer a {
+	color: #D7CeC7;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+footer a:hover {
+	color: #c09f80;
+}
+footer .fab {
+	padding-right: 5%;
+}
+/*VERY BOTTOM FOOTER*/
+/*=====================================================*/
+.footer-banner {
+	clear: both;
+	width: 100%;
+	background-color: #c09f80;
+	padding: 0.3vw 0 0.3vw 0;
+	margin: 0 0 0 0;
+}
+.footer-banner-text {
+	font-family: 'Raleway Light', sans-serif;
+	text-align: center;
+	font-size: 1vw;
+}
+/*ORIGINS PAGE*/
+/*=====================================================*/
+.box-origins {
+	background-image: url(images/ANZAC-Day.png);
+	width: 100%;
+	height: 47vw;
+	background-size: cover;
+	background-position: center;
+}
+.button-origins {
+	margin-right: 30%;
+	margin-left: 40%;
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 2.5vw;
+	position: absolute;
+	margin-top: 30%;
+}
+.banner-text-origins {
+	float: right;
+	margin-top: 10%;
+	margin-right: 5%;
+	text-align: left;
+	font-size: 10vw;
+	color: #76323f;
+	text-shadow: 0.05em 0.05em 0.2em #000;
+	font-family: 'Pacifico', cursive;
+	display: block;
+}
+.origins-container {
+	margin-bottom: 2vw;
+}
+.origins-delicious {
+	background-image: url(images/anzac-biscuits-102691-1.jpeg);
+	background-size: cover;
+	height: 60vw;
+}
+.origins-delicious-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	padding: 0.5%;
+	margin-left: 2%;
+	width: 80%;
+	outline: 0.4em solid #76323f;
+	outline-offset: -4vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	position: relative;
+	top: -5.5vw;
+}
+.origins-delicious-textbox h3 {
+	color: #76323f;
+	position: absolute;
+	left: 6vw;
+	background-image: url(images/seamless_paper_texture.png);
+	font-family: 'Pacifico', cursive;
+	font-size: 3vw;
+	letter-spacing: 5px;
+	top: -2vw;
+	padding-left: 2%;
+	margin-left: 5%;
+	padding-right: 2%;
+}
+.origins-delicious-textbox p {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.4vw;
+	color: #c09f80;
+	padding-top: 6%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.origins-image-container {
+	background-image: url(images/seamless_paper_texture.png);
+	width: 40%;
+	padding: 0.5%;
+	margin-right: 8%;
+	position: relative;
+	box-shadow: 0 0 10em 0 rgba(0, 0, 0, 1);
+	float: right;
+}
+.origins-image-overlay {
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	bottom: 0.5vw;
+	height: 13vw;
+	margin-right: 0.4vw;
+	padding-bottom:5%;
+}
+.origins-image-overlay p {
+	text-align: center;
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.2vw;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.origins-image-container:hover .origins-image-overlay {
+	transition: all ease-in-out 500ms;
+	background: rgba(0,0,0,0.8);
+}
+/*RECIPE PAGE*/
+/*=====================================================*/
+.recipe-banner-container {
+	background-image: url(images/ANZAC-biscuits-2000x1290-Dark.png);
+	width: 100%;
+	height: 47vw;
+	background-size: cover;
+	background-position: center;
+}
+.recipe-banner-text {
+	float: right;
+	margin-top: 10%;
+	margin-right: 5%;
+	text-align: left;
+	font-size: 10vw;
+	color: #76323f;
+	font-family: 'Pacifico', cursive;
+	display: block;
+	text-shadow: 0.05em 0.05em 0.2em #000;
+}
+.recipe-ingredients {
+	background-image: url(images/Anzac-biscuits.jpg);
+	background-size: cover;
+	height: 70vw;
+	margin-bottom:3vw;
+}
+.recipe-ingredients-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	padding: 2%;
+	margin-left: 2%;
+	width: 45%;
+	outline: 0.4em solid #76323f;
+	outline-offset: -4vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	position: relative;
+	top: -6.5vw;
+}
+.recipe-ingredients-textbox h3 {
+	color: #76323f;
+	position: absolute;
+	left: 18vw;
+	transform: translateX(-50%);
+	background-image: url(images/seamless_paper_texture.png);
+	font-family: 'Pacifico', cursive;
+	font-size: 3vw;
+	letter-spacing: 5px;
+	top: -1.5vw;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.recipe-ingredients-textbox ul {
+	padding-top: 5vw;
+	padding-bottom: 2vw;
+	padding-left: 5vw;
+	padding-right: 2vw;
+}
+.recipe-ingredients-textbox li {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.5vw;
+	color: #c09f80;
+	padding-bottom: 2%;
+	padding-right: 2%;
+}
+.recipe-method-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	padding: 2%;
+	margin-left: 2%;
+	width: 50%;
+	outline: 0.4em solid #76323f;
+	outline-offset: -4vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	position: relative;
+	float: right;
+}
+.recipe-method-textbox h3 {
+	color: #76323f;
+	position: absolute;
+	left: 18vw;
+	transform: translateX(-50%);
+	background-image: url(images/seamless_paper_texture.png);
+	font-family: 'Pacifico', cursive;
+	font-size: 3vw;
+	letter-spacing: 5px;
+	top: -1.5vw;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.recipe-method-textbox ul {
+	padding-top: 5vw;
+	padding-bottom: 2vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+.recipe-method-textbox li {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.5vw;
+	color: #c09f80;
+	padding-bottom: 1vw;
+	padding-right: 0.5vw;
+}
+
+/*ABOUT PAGE*/
+/*=====================================================*/
+
+
+.about-banner-container {
+	background-image: url(images/blog_312.jpg);
+	width: 100%;
+	height: 47vw;
+	background-size: cover;
+	background-position: center;
+}
+.about-banner-text {
+	float: right;
+	margin-top: 10%;
+	margin-right: 5%;
+	text-align: left;
+	font-size: 10vw;
+	color: #76323f;
+	text-shadow: 0.05em 0.05em 0.2em #000;
+	font-family: 'Pacifico', cursive;
+	display: block;
+}
+.about-acknowledgements {
+	background-image: url(images/true-blue-anzac-biscuits.jpg);
+	background-size: cover;
+	margin-bottom: 3vw;
+}
+.about-acknowledgements-textbox {
+	background-image: url(images/seamless_paper_texture.png);
+	padding: 1%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	outline: 0.4em solid #76323f;
+	outline-offset: -4vw;
+	box-shadow: 0 0 4em 0 rgba(0,0,0,.25);
+	position: relative;
+	top: -6vw;
+}
+.about-acknowledgements-textbox h3 {
+	color: #76323f;
+	position: absolute;
+	left: 17vw;
+	background-image: url(images/seamless_paper_texture.png);
+	font-family: 'Pacifico', cursive;
+	font-size: 3vw;
+	letter-spacing: 5px;
+	top: -1.5vw;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.about-acknowledgements-textbox p {
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1.5vw;
+	color: #c09f80;
+	padding-top: 7%;
+	padding-bottom: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+}
+.about-images-container {
+	margin-left: 10vw;
+	padding-bottom: 6vw;
+}
+.about-images {
+	width: 40%;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10em 0 rgba(0, 0, 0, 1);
+	text-align: center;
+}
+.about-images img {
+	height: 15vw;
+}
+.about-image-overlay {
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	left: 0em;
+	right: 0em;
+	bottom: 0.01vh;
+	transform: translateY(150%);
+	height: 70%;
+}
+.about-image-overlay p {
+	color: white;
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 1vw;
+	margin-bottom:0;
+	padding-bottom: 0;
+}
+.about-images:hover .about-image-overlay {
+	transition: all ease-in-out 250ms;
+	transform: translateY(0%);
+}
